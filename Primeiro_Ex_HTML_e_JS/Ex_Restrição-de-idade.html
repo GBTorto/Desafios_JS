@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festa</title>
+    <title>Verificação</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        // let idade = parseInt(prompt("Digite sua idade: "))
+        
+        function idade(){
+            const idade = parseInt(document.getElementById('idade').value);
+
+                if(idade >= 18){
+                    alert("Você tem permição para entrar no evento.")
+                }
+
+                else{
+                    alert("Você não tem permição para entrar no evento.")
+                }
+        }
+    </script>
+
 </head>
 <body>
-    <script>
-        let idade = parseInt(prompt("Digite sua idade: "))
-
-if(idade >= 18){
-    alert("Você tem permição para entrar no evento.")
-}
-
-else{
-    alert("Você não tem permição para entrar no evento.")
-}
-    </script>
+    <div class="base">
+    <H1>Controle de Acesso</H1>
+        <div class="sla">
+            <input type="number" id="idade" placeholder="Digite sua idade">
+            <button onclick="idade()"><img src="img/Verificar.png" alt=""></button>
+        </div>
+    </div>
 </body>
 </html>
